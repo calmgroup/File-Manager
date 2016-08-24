@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
 
-        <title>Multiple_Delete</title>
+        <title>Multiple_Delete Test</title>
 
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="screen">
 <link rel="stylesheet" type="text/css" href="css/DT_bootstrap.css">
