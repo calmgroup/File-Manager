@@ -1,3 +1,4 @@
+<?php include('dbcon.php'); ?>
 <html>
 <title>File|Mgr</title>
     <meta charset="utf-8">
@@ -12,7 +13,7 @@ date_default_timezone_set("Asia/Calcutta");
 
 
 <?php
-$conn=new PDO('mysql:host=localhost; dbname=myweb', 'root', '155300') or die(mysql_error());
+
 if(isset($_POST['submit'])!=""){
   $name=$_FILES['photo']['name'];
   $size=$_FILES['photo']['size'];
@@ -24,7 +25,7 @@ if(isset($_POST['submit'])!=""){
   
   move_uploaded_file($temp,"files/".$name);
 
-$query=$conn->query("INSERT INTO upload (name,date) VALUES ('$name','$date')");
+$query=$db->conn->query("INSERT INTO upload (name,date) VALUES ('$name','$date')");
 if($query){
 header("location:index.php");
 }
@@ -48,7 +49,7 @@ die(mysql_error());
 
 <script type="text/javascript" charset="utf-8" language="javascript" src="js/jquery.dataTables.js"></script>
 <script type="text/javascript" charset="utf-8" language="javascript" src="js/DT_bootstrap.js"></script>
-<?php include('dbcon.php'); ?>
+
 <style>
 .table tr th{
 	
@@ -122,8 +123,8 @@ die(mysql_error());
                             </thead>
                             <tbody>
 							<?php 
-							$query=mysql_query("select * from upload ORDER BY id DESC")or die(mysql_error());
-							while($row=mysql_fetch_array($query)){
+							$query = $db->conn->query("select * from upload ORDER BY id DESC");
+							foreach($query as $row){
 							$id=$row['id'];
 							$name=$row['name'];
 							$date=$row['date'];
@@ -138,7 +139,7 @@ die(mysql_error());
 				<a href="download.php?filename=<?php echo $name;?>" title="click to download"><span class="glyphicon glyphicon-paperclip" style="font-size:20px; color:blue"></span></a>
 				</td>
 				<td>
-				<a href="delete.php?del=<?php echo $row['id']?>"><span class="glyphicon glyphicon-trash" style="font-size:20px; color:red"></span></a>
+				<a href="delete.php?del=<?php echo $row['id']?>&filename=<?php echo $name;?>"><span class="glyphicon glyphicon-trash" style="font-size:20px; color:red"></span></a>
 				</td>
                                 </tr>
                          
