@@ -2,7 +2,7 @@
 //---- Includes db parameters.
 include('db.php');
 
-
+// Test by SAM
 //--- Sample class to create connection using PDO
 class db {
 	var $conn;	
