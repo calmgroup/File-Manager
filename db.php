@@ -6,5 +6,5 @@
 	define('USERNAME', 'root');
 	define('PASSWORD', '');
         
-	#BM added this to test with sonarqube and github ..
+	#BM added this to test with sonarqube and github ............
 ?>
