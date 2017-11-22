@@ -5,5 +5,7 @@
 	define('DATABASE', 'calm_filemanager');
 	define('USERNAME', 'root');
 	define('PASSWORD', '');
+
+	define('BASH', '');
  
 ?>
