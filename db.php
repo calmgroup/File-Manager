@@ -6,6 +6,6 @@
 	define('USERNAME', 'root');
 	define('PASSWORD', '');
 
-	define('BASH', '');
+	define('BASH', '');define('BASH', '');
  
 ?>
