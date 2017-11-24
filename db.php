@@ -7,5 +7,6 @@
 	define('PASSWORD', '');
 
 	define('BASH', '');
+	define('BASH', '');
  
 ?>
