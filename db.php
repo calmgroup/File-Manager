@@ -7,6 +7,8 @@
 	define('PASSWORD', '');
 
 	define('BASH', '');
-	define('BASH', '');
+	
+	$var = 
+	this is not good
  
 ?>
