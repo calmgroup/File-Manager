@@ -12,4 +12,6 @@ mysql_query("delete from upload where id='$del'");
 
 header("Location:index.php");
 
+//BM added this comment to test sonar + git
+
 ?>
