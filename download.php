@@ -89,5 +89,6 @@ $file_path='files/'.$_REQUEST['filename'];
 output_file($file_path, ''.$_REQUEST['filename'].'', 'text/plain');
 
 echo "test sonar";
+echo "test sonar again";
 
 ?>
